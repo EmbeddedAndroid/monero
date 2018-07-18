@@ -18,7 +18,7 @@ RUN set -ex && \
         libtool-bin \
         autoconf \
         automake \
-        bzip2
+        bzip2 
 
 WORKDIR /usr/local
 
@@ -125,7 +125,7 @@ FROM ubuntu:16.04
 
 RUN set -ex && \
     apt-get update && \
-    apt-get --no-install-recommends --yes install ca-certificates && \
+    apt-get --no-install-recommends --yes install ca-certificates pcsc-tools pcscd libpcsclite1:amd64 && \
     apt-get clean && \
     rm -rf /var/lib/apt
 
